@@ -218,7 +218,7 @@ export default function Portfolio() {
               <a href="#projects" className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3.5 rounded-xl font-medium transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_35px_rgba(37,99,235,0.6)] flex items-center gap-2 hover:-translate-y-1 cursor-none">
                 View My Work <ChevronRight size={18} />
               </a>
-              <a href="https://wa.me/+916284495403ONE_NUMBER_HERE" target="_blank" rel="noreferrer" className="bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#25D366] px-8 py-3.5 rounded-xl font-medium transition-all border border-[#25D366]/30 hover:border-[#25D366]/60 flex items-center gap-2 hover:-translate-y-1 cursor-none">
+              <a href="https://wa.me/+916284495403" target="_blank" rel="noreferrer" className="bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#25D366] px-8 py-3.5 rounded-xl font-medium transition-all border border-[#25D366]/30 hover:border-[#25D366]/60 flex items-center gap-2 hover:-translate-y-1 cursor-none">
                 <Whatsapp size={18} /> WhatsApp
               </a>
             </motion.div>
@@ -331,7 +331,7 @@ export default function Portfolio() {
             <div className="flex flex-wrap justify-center gap-6 relative z-10">
               <motion.a 
                 whileHover={{ scale: 1.05, y: -5 }} whileTap={{ scale: 0.95 }}
-                href="https://wa.me/+916284495403ONE_NUMBER_HERE" target="_blank" rel="noreferrer" 
+                href="https://wa.me/+916284495403" target="_blank" rel="noreferrer" 
                 className="flex items-center gap-3 px-8 py-4 bg-[#25D366] hover:bg-[#20b858] rounded-2xl transition-colors duration-300 text-slate-950 font-bold shadow-lg shadow-[#25D366]/20 cursor-none"
               >
                 <Whatsapp size={22} /> Chat on WhatsApp
