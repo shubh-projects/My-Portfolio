@@ -83,10 +83,10 @@ const PROJECTS = [
   }
 ];
 
-// Enhanced Animation variants
+// Animation variants fixed for strict TypeScript compilation
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
 };
 
 const staggerContainer = {
@@ -218,7 +218,7 @@ export default function Portfolio() {
               <a href="#projects" className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3.5 rounded-xl font-medium transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_35px_rgba(37,99,235,0.6)] flex items-center gap-2 hover:-translate-y-1 cursor-none">
                 View My Work <ChevronRight size={18} />
               </a>
-              <a href="https://wa.me/916284495403" target="_blank" rel="noreferrer" className="bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#25D366] px-8 py-3.5 rounded-xl font-medium transition-all border border-[#25D366]/30 hover:border-[#25D366]/60 flex items-center gap-2 hover:-translate-y-1 cursor-none">
+              <a href="https://wa.me/YOUR_PHONE_NUMBER_HERE" target="_blank" rel="noreferrer" className="bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#25D366] px-8 py-3.5 rounded-xl font-medium transition-all border border-[#25D366]/30 hover:border-[#25D366]/60 flex items-center gap-2 hover:-translate-y-1 cursor-none">
                 <Whatsapp size={18} /> WhatsApp
               </a>
             </motion.div>
@@ -319,7 +319,7 @@ export default function Portfolio() {
             initial={{ opacity: 0, scale: 0.95, y: 30 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-[2.5rem] p-12 md:p-20 text-center overflow-hidden relative shadow-2xl"
           >
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[200%] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/15 via-transparent to-transparent pointer-events-none"></div>
@@ -331,7 +331,7 @@ export default function Portfolio() {
             <div className="flex flex-wrap justify-center gap-6 relative z-10">
               <motion.a 
                 whileHover={{ scale: 1.05, y: -5 }} whileTap={{ scale: 0.95 }}
-                href="https://wa.me/916284495403" target="_blank" rel="noreferrer" 
+                href="https://wa.me/YOUR_PHONE_NUMBER_HERE" target="_blank" rel="noreferrer" 
                 className="flex items-center gap-3 px-8 py-4 bg-[#25D366] hover:bg-[#20b858] rounded-2xl transition-colors duration-300 text-slate-950 font-bold shadow-lg shadow-[#25D366]/20 cursor-none"
               >
                 <Whatsapp size={22} /> Chat on WhatsApp
