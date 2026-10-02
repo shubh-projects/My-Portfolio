@@ -83,7 +83,7 @@ const PROJECTS = [
   }
 ];
 
-// Animation variants fixed by removing the type-conflicting 'ease' property
+// 100% Type-Safe Animation Variants
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
@@ -99,7 +99,7 @@ const staggerContainer = {
 
 const textReveal = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100, damping: 10 } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
 };
 
 export default function Portfolio() {
@@ -139,24 +139,24 @@ export default function Portfolio() {
       <motion.div 
         className="fixed top-0 left-0 w-8 h-8 rounded-full bg-blue-400/40 blur-[4px] pointer-events-none z-[100] mix-blend-screen"
         animate={{ x: mousePos.x - 16, y: mousePos.y - 16 }}
-        transition={{ type: "spring", stiffness: 500, damping: 28, mass: 0.5 }}
+        transition={{ duration: 0.15 }}
       />
       <motion.div 
         className="fixed top-0 left-0 w-2 h-2 rounded-full bg-white pointer-events-none z-[101]"
         animate={{ x: mousePos.x - 4, y: mousePos.y - 4 }}
-        transition={{ type: "spring", stiffness: 1000, damping: 40, mass: 0.1 }}
+        transition={{ duration: 0 }}
       />
 
       {/* Parallax Ambient Background */}
       <motion.div style={{ y: backgroundY }} className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
         <motion.div 
           animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1], x: [0, 50, 0] }}
-          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 15, repeat: Infinity }}
           className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-blue-900/40 blur-[140px]"
         />
         <motion.div 
           animate={{ scale: [1, 1.3, 1], opacity: [0.1, 0.2, 0.1], x: [0, -60, 0] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 20, repeat: Infinity }}
           className="absolute top-[40%] -right-[10%] w-[40%] h-[60%] rounded-full bg-purple-900/30 blur-[140px]"
         />
       </motion.div>
@@ -218,7 +218,7 @@ export default function Portfolio() {
               <a href="#projects" className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3.5 rounded-xl font-medium transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_35px_rgba(37,99,235,0.6)] flex items-center gap-2 hover:-translate-y-1 cursor-none">
                 View My Work <ChevronRight size={18} />
               </a>
-              <a href="https://wa.me/+916284495403_NUMBER_HERE" target="_blank" rel="noreferrer" className="bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#25D366] px-8 py-3.5 rounded-xl font-medium transition-all border border-[#25D366]/30 hover:border-[#25D366]/60 flex items-center gap-2 hover:-translate-y-1 cursor-none">
+              <a href="https://wa.me/+916284495403ONE_NUMBER_HERE" target="_blank" rel="noreferrer" className="bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#25D366] px-8 py-3.5 rounded-xl font-medium transition-all border border-[#25D366]/30 hover:border-[#25D366]/60 flex items-center gap-2 hover:-translate-y-1 cursor-none">
                 <Whatsapp size={18} /> WhatsApp
               </a>
             </motion.div>
@@ -234,7 +234,7 @@ export default function Portfolio() {
           >
             <motion.div
               animate={{ y: [0, -20, 0] }}
-              transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+              transition={{ repeat: Infinity, duration: 5 }}
               className="w-full h-full relative group cursor-none"
             >
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-full blur-2xl opacity-40 animate-pulse group-hover:opacity-70 transition-opacity duration-500"></div>
@@ -331,7 +331,7 @@ export default function Portfolio() {
             <div className="flex flex-wrap justify-center gap-6 relative z-10">
               <motion.a 
                 whileHover={{ scale: 1.05, y: -5 }} whileTap={{ scale: 0.95 }}
-                href="https://wa.me/+916284495403_NUMBER_HERE" target="_blank" rel="noreferrer" 
+                href="https://wa.me/+916284495403ONE_NUMBER_HERE" target="_blank" rel="noreferrer" 
                 className="flex items-center gap-3 px-8 py-4 bg-[#25D366] hover:bg-[#20b858] rounded-2xl transition-colors duration-300 text-slate-950 font-bold shadow-lg shadow-[#25D366]/20 cursor-none"
               >
                 <Whatsapp size={22} /> Chat on WhatsApp
