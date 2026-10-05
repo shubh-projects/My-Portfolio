@@ -39,11 +39,39 @@ const Whatsapp = ({ size = 24, className = "" }) => (
 
 const PROJECTS = [
   {
+    title: 'Haverune Real Estate',
+    description: 'A premium property listing platform with advanced search capabilities, designed for a high-end property browsing experience.',
+    tech: ['Next.js', 'React', 'Tailwind CSS'],
+    link: 'https://haverune-real-estate.vercel.app/',
+    github: 'https://github.com/shubh-projects'
+  },
+  {
+    title: 'Vigorim Fitness',
+    description: 'A modern fitness and gym platform featuring dynamic class schedules, trainer profiles, and an engaging high-energy UI.',
+    tech: ['Next.js', 'React', 'Tailwind CSS'],
+    link: 'https://vigorim-fitness.vercel.app/',
+    github: 'https://github.com/shubh-projects'
+  },
+  {
     title: 'EstateFlow CRM',
     description: 'A comprehensive real estate customer relationship management platform for tracking properties, agents, and client interactions with secure role-based access.',
     demoDetails: 'Demo Login: admin@estateflowcrm.dev | Pass: Password123!',
     tech: ['Next.js', 'React', 'Tailwind CSS', 'Database'],
     link: 'https://estateflow-crm-seven.vercel.app/',
+    github: 'https://github.com/shubh-projects'
+  },
+  {
+    title: 'Veylo Real Estate Platform',
+    description: 'An elegant property management and discovery platform focusing on connecting buyers and sellers with a seamless interface.',
+    tech: ['Next.js', 'React', 'Tailwind CSS'],
+    link: 'https://veylo-real-estate-platform.vercel.app/',
+    github: 'https://github.com/shubh-projects'
+  },
+  {
+    title: 'Pulseyard Fitness',
+    description: 'A responsive workout and fitness tracking interface built to motivate users with a clean, modern aesthetic.',
+    tech: ['React', 'Tailwind CSS', 'UI/UX'],
+    link: 'https://pulseyard-fitness.vercel.app/',
     github: 'https://github.com/shubh-projects'
   },
   {
@@ -63,7 +91,7 @@ const PROJECTS = [
   {
     title: 'GST Filing Automation',
     description: 'Engineered browser automation scripts to streamline GSTR-3B form interactions, automated invoice data extraction, and modal dismissals on the official GST portal.',
-    tech: ['JavaScript', 'Browser Automation', 'DOM Manipulation'],
+    tech: ['JavaScript', 'Browser Automation'],
     link: '/GST fillimg automation.mp4', 
     github: 'https://github.com/shubh-projects'
   },
@@ -259,7 +287,7 @@ export default function Portfolio() {
           </motion.h2>
           
           <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid md:grid-cols-2 gap-8"
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}
           >
             {PROJECTS.map((project, idx) => (
