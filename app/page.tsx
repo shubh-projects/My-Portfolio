@@ -12,7 +12,8 @@ import {
   ChevronRight,
   Code2,
   Key,
-  MessageCircle
+  MessageCircle,
+  Sparkles
 } from 'lucide-react';
 
 // Custom SVG components for brand icons
@@ -38,6 +39,13 @@ const Whatsapp = ({ size = 24, className = "" }) => (
 );
 
 const PROJECTS = [
+  {
+    title: 'Weblyss Lusion Experience',
+    description: 'A highly immersive web experience featuring heavy, complex 3D animations, particle effects, and cinematic scroll-jacking designed to inspire and innovate.',
+    tech: ['React', 'WebGL', 'Framer Motion', '3D Animation'],
+    link: 'https://weblvss-fushion-website-standalone.vercel.app',
+    github: 'https://github.com/shubh-projects'
+  },
   {
     title: 'Haverune Real Estate',
     description: 'A premium property listing platform with advanced search capabilities, designed for a high-end property browsing experience.',
@@ -246,8 +254,8 @@ export default function Portfolio() {
               <a href="#projects" className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3.5 rounded-xl font-medium transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_35px_rgba(37,99,235,0.6)] flex items-center gap-2 hover:-translate-y-1 cursor-none">
                 View My Work <ChevronRight size={18} />
               </a>
-              <a href="https://wa.me/+916284495403" target="_blank" rel="noreferrer" className="bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#25D366] px-8 py-3.5 rounded-xl font-medium transition-all border border-[#25D366]/30 hover:border-[#25D366]/60 flex items-center gap-2 hover:-translate-y-1 cursor-none">
-                <Whatsapp size={18} /> WhatsApp
+              <a href="#skills" className="bg-slate-900/80 backdrop-blur-sm hover:bg-slate-800 text-white px-8 py-3.5 rounded-xl font-medium transition-all border border-slate-700 hover:border-blue-500 flex items-center gap-2 hover:-translate-y-1 cursor-none">
+                <Sparkles size={18} className="text-cyan-400" /> My Tech Stack
               </a>
             </motion.div>
           </motion.div>
@@ -338,6 +346,66 @@ export default function Portfolio() {
                 </div>
               </motion.div>
             ))}
+          </motion.div>
+        </section>
+
+        {/* Skills Section */}
+        <section id="skills" className="py-24 border-t border-slate-800/50">
+          <motion.h2 
+            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}
+            className="text-4xl font-bold mb-12 flex items-center gap-4"
+          >
+            <span className="p-3 bg-purple-500/10 rounded-xl border border-purple-500/20"><Terminal className="text-purple-400" size={28} /></span> 
+            Technical Arsenal
+          </motion.h2>
+          <motion.div 
+            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}
+            className="grid md:grid-cols-3 gap-8"
+          >
+            {/* Skill Card 1 */}
+            <motion.div variants={fadeUp} whileHover={{ y: -5 }} className="bg-slate-900/40 backdrop-blur-md border border-slate-800 p-8 rounded-3xl hover:border-slate-600 transition-colors shadow-lg">
+              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800/50">
+                <Cpu className="text-cyan-400" size={24} />
+                <h3 className="text-xl font-semibold">Workflow & AI</h3>
+              </div>
+              <ul className="space-y-4 text-slate-400">
+                {['AI Automations', 'n8n Workflows', 'Browser Automation', 'LLM Integrations'].map((skill, i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-cyan-400/50"></div> {skill}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+            
+            {/* Skill Card 2 */}
+            <motion.div variants={fadeUp} whileHover={{ y: -5 }} className="bg-slate-900/40 backdrop-blur-md border border-slate-800 p-8 rounded-3xl hover:border-slate-600 transition-colors shadow-lg">
+              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800/50">
+                <Layout className="text-purple-400" size={24} />
+                <h3 className="text-xl font-semibold">Web & Design</h3>
+              </div>
+              <ul className="space-y-4 text-slate-400">
+                {['Webflow', 'React & Next.js', 'Tailwind CSS', 'UI/UX Architecture'].map((skill, i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-purple-400/50"></div> {skill}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Skill Card 3 */}
+            <motion.div variants={fadeUp} whileHover={{ y: -5 }} className="bg-slate-900/40 backdrop-blur-md border border-slate-800 p-8 rounded-3xl hover:border-slate-600 transition-colors shadow-lg">
+              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800/50">
+                <Database className="text-blue-400" size={24} />
+                <h3 className="text-xl font-semibold">Backend & Data</h3>
+              </div>
+              <ul className="space-y-4 text-slate-400">
+                {['Node.js & Python', 'PostgreSQL & Redis', 'REST APIs', 'Docker'].map((skill, i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-blue-400/50"></div> {skill}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
           </motion.div>
         </section>
 
