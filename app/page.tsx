@@ -43,7 +43,7 @@ const PROJECTS = [
     title: 'Weblyss Lusion Experience',
     description: 'A highly immersive web experience featuring heavy, complex 3D animations, particle effects, and cinematic scroll-jacking designed to inspire and innovate.',
     tech: ['React', 'WebGL', 'Framer Motion', '3D Animation'],
-    link: 'https://weblvss-fushion-website-standalone.vercel.app',
+    link: '/lusion.mp4',
     github: 'https://github.com/shubh-projects'
   },
   {
